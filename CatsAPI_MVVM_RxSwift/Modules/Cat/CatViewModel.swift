@@ -1,6 +1,6 @@
 //
 //  CatViewModel.swift
-//  CatsAPI_MVVM
+//  CatsAPI_MVVM_RxSwift
 //
 //  Created by Roman Gorshkov on 23.12.2021.
 //

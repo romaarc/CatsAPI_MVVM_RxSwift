@@ -27,6 +27,11 @@
 		BB5DEAA82777E2050027482F /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5DEAA72777E2050027482F /* Label.swift */; };
 		BB5DEAAB2777E65A0027482F /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5DEAAA2777E65A0027482F /* StackView.swift */; };
 		BB5DEAAD277803590027482F /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5DEAAC277803590027482F /* UIStackView+Extension.swift */; };
+		BBC0E14F277A9AA4005281C9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BBC0E14E277A9AA4005281C9 /* RxCocoa */; };
+		BBC0E151277A9AA4005281C9 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BBC0E150277A9AA4005281C9 /* RxRelay */; };
+		BBC0E153277A9AA4005281C9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBC0E152277A9AA4005281C9 /* RxSwift */; };
+		BBC0E156277AB5BB005281C9 /* Action in Frameworks */ = {isa = PBXBuildFile; productRef = BBC0E155277AB5BB005281C9 /* Action */; };
+		BBC0E158277ABDC1005281C9 /* RxHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0E157277ABDC1005281C9 /* RxHelpers.swift */; };
 		BBD37C59277621DF008B617A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BBD37C58277621DF008B617A /* Kingfisher */; };
 		BBFB02AB2774E9F600C8DA77 /* SBSansUI-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFB02AA2774E9F000C8DA77 /* SBSansUI-Regular.ttf */; };
 		BBFB02AC2774E9F800C8DA77 /* SBSansDisplay-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFB02A82774E9E900C8DA77 /* SBSansDisplay-SemiBold.ttf */; };
@@ -39,7 +44,6 @@
 		BBFB02CA2774F6BD00C8DA77 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02C92774F6BD00C8DA77 /* API.swift */; };
 		BBFB02CC2774F76100C8DA77 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02CB2774F76100C8DA77 /* Breed.swift */; };
 		BBFB02CE2774F7AA00C8DA77 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02CD2774F7AA00C8DA77 /* NetworkService.swift */; };
-		BBFB02D02774F84D00C8DA77 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02CF2774F84D00C8DA77 /* Reachability.swift */; };
 		BBFB02D22774F88000C8DA77 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02D12774F88000C8DA77 /* UIDevice+Extension.swift */; };
 		BBFB02D42774F91B00C8DA77 /* URLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02D32774F91B00C8DA77 /* URLFactory.swift */; };
 		BBFB02D82775166400C8DA77 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02D72775166400C8DA77 /* NetworkServiceProtocol.swift */; };
@@ -48,7 +52,6 @@
 		BBFB02DF27751C2F00C8DA77 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02DE27751C2F00C8DA77 /* Response.swift */; };
 		BBFB02E227752B6E00C8DA77 /* VerticalFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02E127752B6E00C8DA77 /* VerticalFlowLayout.swift */; };
 		BBFB02E5277530B200C8DA77 /* CatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02E4277530B200C8DA77 /* CatCell.swift */; };
-		BBFB02E82775356D00C8DA77 /* ImageCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02E72775356D00C8DA77 /* ImageCacher.swift */; };
 		BBFB02EA277535B600C8DA77 /* UIImageView+Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB02E9277535B600C8DA77 /* UIImageView+Caching.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +78,7 @@
 		BB5DEAA72777E2050027482F /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		BB5DEAAA2777E65A0027482F /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		BB5DEAAC277803590027482F /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		BBC0E157277ABDC1005281C9 /* RxHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxHelpers.swift; sourceTree = "<group>"; };
 		BBFB02A82774E9E900C8DA77 /* SBSansDisplay-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SBSansDisplay-SemiBold.ttf"; sourceTree = "<group>"; };
 		BBFB02A92774E9E900C8DA77 /* SBSansUI-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SBSansUI-Light.ttf"; sourceTree = "<group>"; };
 		BBFB02AA2774E9F000C8DA77 /* SBSansUI-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SBSansUI-Regular.ttf"; sourceTree = "<group>"; };
@@ -86,7 +90,6 @@
 		BBFB02C92774F6BD00C8DA77 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BBFB02CB2774F76100C8DA77 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		BBFB02CD2774F7AA00C8DA77 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		BBFB02CF2774F84D00C8DA77 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		BBFB02D12774F88000C8DA77 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		BBFB02D32774F91B00C8DA77 /* URLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactory.swift; sourceTree = "<group>"; };
 		BBFB02D72775166400C8DA77 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
@@ -95,7 +98,6 @@
 		BBFB02DE27751C2F00C8DA77 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		BBFB02E127752B6E00C8DA77 /* VerticalFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalFlowLayout.swift; sourceTree = "<group>"; };
 		BBFB02E4277530B200C8DA77 /* CatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCell.swift; sourceTree = "<group>"; };
-		BBFB02E72775356D00C8DA77 /* ImageCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacher.swift; sourceTree = "<group>"; };
 		BBFB02E9277535B600C8DA77 /* UIImageView+Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Caching.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC0E156277AB5BB005281C9 /* Action in Frameworks */,
+				BBC0E151277A9AA4005281C9 /* RxRelay in Frameworks */,
+				BBC0E14F277A9AA4005281C9 /* RxCocoa in Frameworks */,
+				BBC0E153277A9AA4005281C9 /* RxSwift in Frameworks */,
 				BBD37C59277621DF008B617A /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +174,7 @@
 				BB135F662774E77000E81964 /* Constants */,
 				BB135F722774E87900E81964 /* Font */,
 				BB135F692774E7D200E81964 /* UIKit */,
+				BBC0E157277ABDC1005281C9 /* RxHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -250,8 +257,8 @@
 		BBFB02B22774ED7600C8DA77 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				BBFB02E027752B6000C8DA77 /* FlowLayout */,
 				BBFB02DD27751C1E00C8DA77 /* Typealias */,
+				BBFB02E027752B6000C8DA77 /* FlowLayout */,
 				BBFB02B62774EE1A00C8DA77 /* UI */,
 			);
 			path = Components;
@@ -277,7 +284,6 @@
 		BBFB02B52774EDAF00C8DA77 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				BBFB02E62775355800C8DA77 /* Cache */,
 				BBFB02C82774F6B000C8DA77 /* Network */,
 			);
 			path = Services;
@@ -339,7 +345,6 @@
 				BBFB02CD2774F7AA00C8DA77 /* NetworkService.swift */,
 				BBFB02D92775170600C8DA77 /* NetworkService+Breeds.swift */,
 				BBFB02D72775166400C8DA77 /* NetworkServiceProtocol.swift */,
-				BBFB02CF2774F84D00C8DA77 /* Reachability.swift */,
 				BBFB02D32774F91B00C8DA77 /* URLFactory.swift */,
 			);
 			path = Network;
@@ -369,14 +374,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		BBFB02E62775355800C8DA77 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-				BBFB02E72775356D00C8DA77 /* ImageCacher.swift */,
-			);
-			path = Cache;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -395,6 +392,10 @@
 			name = CatsAPI_MVVM_RxSwift;
 			packageProductDependencies = (
 				BBD37C58277621DF008B617A /* Kingfisher */,
+				BBC0E14E277A9AA4005281C9 /* RxCocoa */,
+				BBC0E150277A9AA4005281C9 /* RxRelay */,
+				BBC0E152277A9AA4005281C9 /* RxSwift */,
+				BBC0E155277AB5BB005281C9 /* Action */,
 			);
 			productName = CatsAPI_MVVM;
 			productReference = BB135F482774E44300E81964 /* CatsAPI_MVVM_RxSwift.app */;
@@ -426,6 +427,8 @@
 			mainGroup = BB135F3F2774E44300E81964;
 			packageReferences = (
 				BBD37C57277621DF008B617A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BBC0E14D277A9AA4005281C9 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				BBC0E154277AB5BB005281C9 /* XCRemoteSwiftPackageReference "Action" */,
 			);
 			productRefGroup = BB135F492774E44300E81964 /* Products */;
 			projectDirPath = "";
@@ -462,13 +465,13 @@
 				BB5DEA982777907C0027482F /* CatDetailViewController.swift in Sources */,
 				BBFB02EA277535B600C8DA77 /* UIImageView+Caching.swift in Sources */,
 				BB135F6B2774E7EF00E81964 /* ReuseIdentifier.swift in Sources */,
-				BBFB02D02774F84D00C8DA77 /* Reachability.swift in Sources */,
 				BBFB02AF2774EC7600C8DA77 /* GlobalConstants.swift in Sources */,
 				BB135F6D2774E80800E81964 /* Font.swift in Sources */,
 				BB5DEAA027779FD00027482F /* BaseView.swift in Sources */,
 				BBFB02CE2774F7AA00C8DA77 /* NetworkService.swift in Sources */,
 				BB135F682774E7B300E81964 /* Colors.swift in Sources */,
 				BBFB02B92774EE4000C8DA77 /* BaseViewController.swift in Sources */,
+				BBC0E158277ABDC1005281C9 /* RxHelpers.swift in Sources */,
 				BB5DEAAB2777E65A0027482F /* StackView.swift in Sources */,
 				BB5DEAA22777C1130027482F /* StarRatingStackView.swift in Sources */,
 				BB5DEAA82777E2050027482F /* Label.swift in Sources */,
@@ -490,7 +493,6 @@
 				BBFB02CA2774F6BD00C8DA77 /* API.swift in Sources */,
 				BBFB02CC2774F76100C8DA77 /* Breed.swift in Sources */,
 				BBFB02D82775166400C8DA77 /* NetworkServiceProtocol.swift in Sources */,
-				BBFB02E82775356D00C8DA77 /* ImageCacher.swift in Sources */,
 				BBFB02BF2774EEE800C8DA77 /* BaseUICollectionViewCell.swift in Sources */,
 				BBFB02DF27751C2F00C8DA77 /* Response.swift in Sources */,
 			);
@@ -561,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -617,7 +619,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -707,6 +709,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BBC0E14D277A9AA4005281C9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		BBC0E154277AB5BB005281C9 /* XCRemoteSwiftPackageReference "Action" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/Action";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		BBD37C57277621DF008B617A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -718,6 +736,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BBC0E14E277A9AA4005281C9 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBC0E14D277A9AA4005281C9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		BBC0E150277A9AA4005281C9 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBC0E14D277A9AA4005281C9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		BBC0E152277A9AA4005281C9 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBC0E14D277A9AA4005281C9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		BBC0E155277AB5BB005281C9 /* Action */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBC0E154277AB5BB005281C9 /* XCRemoteSwiftPackageReference "Action" */;
+			productName = Action;
+		};
 		BBD37C58277621DF008B617A /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BBD37C57277621DF008B617A /* XCRemoteSwiftPackageReference "Kingfisher" */;

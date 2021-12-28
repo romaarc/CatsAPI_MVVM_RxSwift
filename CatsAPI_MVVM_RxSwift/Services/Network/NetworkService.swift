@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 enum NetworkErrors: Error {
     case wrongURL
@@ -16,42 +18,26 @@ enum NetworkErrors: Error {
 
 final class NetworkService {
     
-    private let reachability: ReachabilityProtocol
-    
-    init(reachability: ReachabilityProtocol) {
-        self.reachability = reachability
-    }
-    
-    func baseRequest<T: Decodable>(request: URLRequest, completion: @escaping (Result<T, Error>) -> Void) {
-        guard reachability.isConnectedToNetwork() else {
-            completion(.failure(NetworkErrors.noConnection))
-            return
+    func baseRequest<T: Decodable>(request: URLRequest) -> Observable<T> {
+        return Observable.create { observer in
+            let bag = URLSession.shared.rx.data(request: request)
+                .subscribe { event in
+                    switch event {
+                    case .next(let data):
+                        do {
+                            let decodedModel = try JSONDecoder().decode(T.self, from: data)
+                            observer.onNext(decodedModel)
+                        }
+                        catch {
+                            observer.onError(NetworkErrors.decodeIsFail)
+                        }
+                    case .error(_):
+                        observer.onError(NetworkErrors.dataIsEmpty)
+                    case .completed:
+                        observer.onCompleted()
+                    }
+                }
+            return Disposables.create([bag])
         }
-        
-        guard let _ = request.url else {
-            completion(.failure(NetworkErrors.wrongURL))
-            return
-        }
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(NetworkErrors.dataIsEmpty))
-                return
-            }
-            
-            let decoder = JSONDecoder()
-            do {
-                let decodedModel = try decoder.decode(T.self, from: data)
-                completion(.success(decodedModel))
-            } catch {
-                    completion(.failure(NetworkErrors.decodeIsFail))
-            }
-            
-        }.resume()
     }
 }

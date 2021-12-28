@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import RxSwift
+
 extension NetworkService: NetworkServiceProtocol {
-    func fetchBreeds(with params: BreedsURLParameters, and completion: @escaping (Result<Response, Error>) -> Void) {
+    func fetchBreeds(with page: Int) -> Observable<Response> {
+        let params = BreedsURLParameters(attach_breed: "", page: page, limit: GlobalConstants.limit)
         let request = URLFactory.getBreedsRequest(params: params)
-        self.baseRequest(request: request, completion: completion)
+        return self.baseRequest(request: request)
     }
 }

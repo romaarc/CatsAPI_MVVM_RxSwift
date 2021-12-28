@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BB135F472774E44300E81964"
-               BuildableName = "CatsAPI_MVVM.app"
+               BuildableName = "CatsAPI_MVVM_RxSwift.app"
                BlueprintName = "CatsAPI_MVVM_RxSwift"
                ReferencedContainer = "container:CatsAPI_MVVM_RxSwift.xcodeproj">
             </BuildableReference>
@@ -26,8 +26,19 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BB657301277A7E330061C08C"
+               BuildableName = "CatsAPI_MVVM_RxSwiftTests.xctest"
+               BlueprintName = "CatsAPI_MVVM_RxSwiftTests"
+               ReferencedContainer = "container:CatsAPI_MVVM_RxSwift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -45,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BB135F472774E44300E81964"
-            BuildableName = "CatsAPI_MVVM.app"
+            BuildableName = "CatsAPI_MVVM_RxSwift.app"
             BlueprintName = "CatsAPI_MVVM_RxSwift"
             ReferencedContainer = "container:CatsAPI_MVVM_RxSwift.xcodeproj">
          </BuildableReference>
@@ -62,7 +73,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BB135F472774E44300E81964"
-            BuildableName = "CatsAPI_MVVM.app"
+            BuildableName = "CatsAPI_MVVM_RxSwift.app"
             BlueprintName = "CatsAPI_MVVM_RxSwift"
             ReferencedContainer = "container:CatsAPI_MVVM_RxSwift.xcodeproj">
          </BuildableReference>

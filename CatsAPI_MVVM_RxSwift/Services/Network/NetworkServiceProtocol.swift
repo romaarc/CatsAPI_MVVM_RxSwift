@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol NetworkServiceProtocol {
-    func fetchBreeds(with params: BreedsURLParameters, and completion: @escaping (Result<Response, Error>) -> Void)
+    func fetchBreeds(with page: Int) -> Observable<Response>
 }

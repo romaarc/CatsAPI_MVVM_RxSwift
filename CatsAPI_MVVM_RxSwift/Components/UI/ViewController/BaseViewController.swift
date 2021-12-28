@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class BaseViewController: UIViewController {
     
+    let disposeBag = DisposeBag()
     var collectionView: UICollectionView
     
     lazy var activityIndicator: UIActivityIndicatorView = {
@@ -41,14 +43,3 @@ class BaseViewController: UIViewController {
     
     func setupCollectionView() {}
 }
-//MARK: - activityIndicator
-extension BaseViewController {
-    func stopActivityIndicator() {
-        activityIndicator.stopAnimating()
-    }
-
-    func startActivityIndicator() {
-        activityIndicator.startAnimating()
-    }
-}
-

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CatViewController: BaseViewController {
     
@@ -14,7 +16,6 @@ class CatViewController: BaseViewController {
     init(viewModel: CatViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        setupBindables()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,26 +24,52 @@ class CatViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchBreeds()
-    }
-    
-    private func setupBindables() {
-        viewModel.reload = { [weak self] in
-            DispatchQueue.main.async {
-                self?.collectionView.reloadData()
+        
+        viewModel.outputs.cats
+            .observe(on: MainScheduler.instance)
+            .bind(to: collectionView.rx.items) { [weak self] collectionView, row, cat in
+                guard let self = self else { return UICollectionViewCell() }
+                let cell = self.collectionView.dequeueCell(cellType: CatCell.self, for: IndexPath(row: row, section: 0))
+                cell.update(with: cat)
+                return cell
             }
-        }
+            .disposed(by: disposeBag)
+        
+        collectionView.rx.modelSelected(Breed.self)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                let detailViewModel = CatDetailViewModel(cat: $0)
+                let catDetailVC = CatDetailViewController(viewModel: detailViewModel)
+                catDetailVC.modalPresentationStyle = .fullScreen
+                self?.navigationController?.pushViewController(catDetailVC, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.outputs.error
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: {
+                print($0)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.outputs.isLoading
+            .observe(on: MainScheduler.instance)
+            .bind(to: activityIndicator.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
+        collectionView.rx.reachedBottom.asObservable()
+            .bind(to: viewModel.inputs.reachedBottomTrigger)
+            .disposed(by: disposeBag)
+        
+        viewModel.inputs.fetchTrigger.onNext(())
     }
     
     override func setupCollectionView() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .white
         collectionView.register(CatCell.self)
         collectionView.addSubview(activityIndicator)
         view.addSubview(collectionView)
-        
         NSLayoutConstraint.activate([
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
@@ -52,29 +79,5 @@ class CatViewController: BaseViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = view.frame
-    }
-}
-
-extension CatViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.catsCount
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueCell(cellType: CatCell.self, for: indexPath)
-        if indexPath.row == viewModel.catsCount - 1, viewModel.catsCount < 47 {
-            viewModel.fetchBreeds()
-        }
-        cell.update(with: viewModel, and: indexPath)
-        return cell
-    }
-}
-
-extension CatViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailViewModel = viewModel.viewModelForSelectedRow(at: indexPath)
-        let catDetailVC = CatDetailViewController(viewModel: detailViewModel)
-        catDetailVC.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(catDetailVC, animated: true)
     }
 }

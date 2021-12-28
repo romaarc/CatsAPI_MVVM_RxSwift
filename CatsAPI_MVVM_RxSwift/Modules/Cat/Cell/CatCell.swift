@@ -90,8 +90,8 @@ extension CatCell {
         ])
     }
     //MARK: - Update with ViewModel
-    func update(with viewModel: CatViewModelProtocol, and indexPath: IndexPath) {
-        let cat = viewModel.cat(at: indexPath.row)
+    func update(with viewModel: Breed) {
+        let cat = viewModel
         detailViewNameLabel.text = cat.name
         detailViewStatusLabel.text = cat.origin
         ///Nothing images in API

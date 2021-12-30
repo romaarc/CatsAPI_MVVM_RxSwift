@@ -8,12 +8,13 @@
 - <a href="https://github.com/ReactiveX/RxSwift">RxSwift</a>
 - <a href="https://github.com/RxSwiftCommunity/Action">Action from RxSwiftCommunity</a>
 
-## Детали реализации
-### Deployment Target
+# Детали реализации
+## Deployment Target
 
 iOS 13
-### Архитектура приложения
+## Архитектура приложения
+**Simple MVVM with RxSwift + Coordinator + Services(URLSession RxSwift)**<br>
 
+# UI
 **UIKit without Storyboard and Xibs, only layout with code**<br>
 
-**Simple MVVM with RxSwift + Coordinator + Services(URLSession RxSwift)**<br>

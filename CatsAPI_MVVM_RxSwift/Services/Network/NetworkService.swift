@@ -17,7 +17,6 @@ enum NetworkErrors: Error {
 }
 
 final class NetworkService {
-    
     func baseRequest<T: Decodable>(request: URLRequest) -> Observable<T> {
         return Observable.create { observer in
             let bag = URLSession.shared.rx.data(request: request)

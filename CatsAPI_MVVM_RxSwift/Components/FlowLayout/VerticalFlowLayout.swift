@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VerticalFlowLayout: UICollectionViewFlowLayout {
+final class VerticalFlowLayout: UICollectionViewFlowLayout {
     
     override init() {
         super.init()

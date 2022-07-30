@@ -28,7 +28,7 @@ protocol CatViewModelType {
 
 protocol CatViewModelProtocol: CatViewModelType & CatViewModelInputs &  CatViewModelOutputs {}
 
-class CatViewModel: CatViewModelProtocol {
+final class CatViewModel: CatViewModelProtocol {
     var inputs: CatViewModelInputs { return self }
     var outputs: CatViewModelOutputs { return self }
     // MARK: - Inputs

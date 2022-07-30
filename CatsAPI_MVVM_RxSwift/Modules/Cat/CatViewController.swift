@@ -9,8 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class CatViewController: BaseViewController {
-    
+final class CatViewController: BaseViewController {
     private var viewModel: CatViewModelProtocol
     
     init(viewModel: CatViewModelProtocol) {
